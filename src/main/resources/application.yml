@@ -1,5 +1,14 @@
 spring:
-    datasource:
-        url: 'jdbc:mysql://localhost:3306'
-        username: root
-        password:
+  datasource:
+    url: 'jdbc:mysql://localhost:3307/schema_shop'
+    username: root
+    password: P@ssw0rdS
+server:
+  servlet:
+    context-path: /api
+---
+spring:
+  profiles: dev
+---
+spring:
+  profiles: prod
