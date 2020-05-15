@@ -3,9 +3,9 @@ spring:
     url: 'jdbc:mysql://localhost:3307/schema_shop'
     username: root
     password: P@ssw0rdS
-server:
-  servlet:
-    context-path: /api
+  data:
+    rest:
+      base-path: /api
 ---
 spring:
   profiles: dev
