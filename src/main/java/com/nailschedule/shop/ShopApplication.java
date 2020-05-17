@@ -1,5 +1,6 @@
 package com.nailschedule.shop;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
@@ -8,6 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 @SpringBootApplication
 @EnableSwagger2WebMvc
+@EnableEncryptableProperties
 @Import(SpringDataRestConfiguration.class)
 public class ShopApplication {
 

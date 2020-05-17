@@ -1,14 +1,26 @@
 spring:
   datasource:
-    url: 'jdbc:mysql://localhost:3307/schema_shop'
-    username: root
-    password: P@ssw0rdS
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
   data:
     rest:
       base-path: /api
+
+server:
+  port: 5000
 ---
 spring:
   profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3307/schema_shop
+    username: root
+    password: ENC(AnepqY3A6WvH0NRi9aNuXa+LQ480CLRA)
+
 ---
 spring:
   profiles: prod
+  datasource:
+    url: jdbc:mysql://remotemysql.com:3306/Mi1Pch3Xww
+    username: Mi1Pch3Xww
+    password: ENC(jJUV2VJWi+ASYlaAKRDAZ2FwwvmuAS2L)
